@@ -1,0 +1,63 @@
+<div class = "jumbotron">
+  <form novalidate [formGroup] = "productForm">
+      <div class="form-group d-flex mb-2">
+        <label class="col-md-2 col-form-label" for="name">Product Name</label>
+        <div class="col-md-5">
+          <input class="form-control" id="name" type="text" formControlName = "name" 
+            [ngClass] = "{'is-invalid': ((productForm.get('name').touched || 
+            productForm.get('name').dirty)) && (productForm.get('name').invalid)}" />
+          <span class="invalid-feedback">
+            <span *ngIf = "productForm.get('name').errors?.required">
+              Product Name is required
+            </span>
+          </span>
+        </div>
+      </div>
+      </form>
+      <form novalidate [formGroup] = "productForm">
+      <div class="form-group d-flex mb-2">
+          <label class="col-md-2 col-form-label" for="code">Product Code</label>
+          <div class="col-md-5">
+            <input class="form-control" id="code" type="text" formControlName = "code" 
+              [ngClass] = "{'is-invalid': ((productForm.get('code').touched || 
+              productForm.get('code').dirty)) && (productForm.get('code').invalid)}" />
+            <span class="invalid-feedback">
+              <span *ngIf = "productForm.get('code').errors?.required">
+               Product  Code  is required
+              </span>
+            </span>
+          </div>
+        </div>
+       
+          <div class="form-group d-flex mb-2">
+              <label class="col-md-2 col-form-label" for="image">Product Image</label>
+              <div class="col-md-5">
+                <input class="form-control" id="image" type="text" formControlName = "image" 
+                  [ngClass] = "{'is-invalid': ((productForm.get('image').touched || 
+                  productForm.get('image').dirty)) && (productForm.get('image').invalid)}" />
+                <span class="invalid-feedback">
+                  <span *ngIf = "productForm.get('image').errors?.required">
+                    Image is required
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="form-group d-flex mb-2">
+                <label class="col-md-2 col-form-label" for="price">Price</label>
+                <div class="col-md-5">
+                  <input class="form-control" id="price" type="text" formControlName = "price" 
+                    [ngClass] = "{'is-invalid': ((productForm.get('price').touched || 
+                    productForm.get('price').dirty)) && (productForm.get('price').invalid)}" />
+                  <span class="invalid-feedback">
+                    <span *ngIf = "productForm.get('price').errors?.required">
+                      Price  is required
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <button class="btn btn-primary add-btn2">
+                  Save
+                </button>
+             
+  </form>
+</div>
